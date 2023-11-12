@@ -14,4 +14,24 @@ No, you should not share the ".expo" folder. It does not contain any information
 
 Upon project creation, the ".expo" folder is already added to your ".gitignore" file.
 
-Testing this line
+NOTES
+2023 11 13:
+Modified and added code to test, but not expo was found / Didn't run properly
+===
+
+PS C:\Users\calfa\Documents\GitHub\React-Native-App> npx expo start
+┌───────────────────────────────────────────────────────────────────────────┐
+│ │
+│ The global expo-cli package has been deprecated. │
+│ │
+│ The new Expo CLI is now bundled in your project in the expo package. │
+│ Learn more: https://blog.expo.dev/the-new-expo-cli-f4250d8e3421. │
+│ │
+│ To use the local CLI instead (recommended in SDK 46 and higher), run: │
+│ › npx expo <command> │
+│ │
+└───────────────────────────────────────────────────────────────────────────┘
+Starting project at C:\Users\calfa\Documents\GitHub\React-Native-App
+Unable to find expo in this project - have you run yarn / npm install yet?
+PS C:\Users\calfa\Documents\GitHub\React-Native-App>
+===
