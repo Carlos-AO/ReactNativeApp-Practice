@@ -1,50 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+//Tired... tryed but to practice later... 15/Nov/2023
 
-export default function App() {
-//  return (
-//    <View style={styles.container}>
-//      <Text>Open up App.js to start working on your app!</Text>
-//      <StatusBar style="auto" />
-//    </View>
-//  );
+import React from "react";
+import { Input, IconButton, Checkbox, Text, Box, 
+  VStack, HStack, Heading, Icon, Center, 
+  ToastAndroid } from 'react-native';
+import { Feather, Entypo } from "@expo/vector-icons";
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
+//export default function App() {
 
   const Example = () => {
     const instState = [{
       title: "Code",
       isCompleted: true
     }, {
-      title: "Meeting now",
+      title: "Meeting with team at 9",
       isCompleted: false
     }, {
-      title: "Check Emails at 9",
+      title: "Check Emails",
       isCompleted: false
     }, {
-      title: "Write an article asap",
+      title: "Write an article",
       isCompleted: false
     }];
     const [list, setList] = React.useState(instState);
     const [inputValue, setInputValue] = React.useState("");
-    const toast = useToast();
-
+  
     const addItem = title => {
       if (title === "") {
-        toast.show({
-          title: "Please Enter Text",
-          status: "warning"
-        });
+        ToastAndroid.show('Please Enter Text', ToastAndroid.SHORT);
         return;
       }
-
+  
       setList(prevList => {
         return [...prevList, {
           title: title,
@@ -52,14 +38,14 @@ export default function App() {
         }];
       });
     };
-
+  
     const handleDelete = index => {
       setList(prevList => {
         const temp = prevList.filter((_, itemI) => itemI !== index);
         return temp;
       });
     };
-
+  
     const handleStatusChange = index => {
       setList(prevList => {
         const newList = [...prevList];
@@ -67,8 +53,9 @@ export default function App() {
         return newList;
       });
     };
-
-    return <Center w="100%">
+  
+    return (
+     <Center w="100%">
         <Box maxW="300" w="100%">
           <Heading mb="2" size="md">
             Wednesday
@@ -96,6 +83,16 @@ export default function App() {
             </VStack>
           </VStack>
         </Box>
-      </Center>;
+      </Center>
+    );
   };
-}
+  
+  export default () => {
+    return (
+      
+        <Center flex={1} px="3">
+            <Example />
+        </Center>
+      
+    );
+  };
