@@ -23,13 +23,13 @@ export default function App() {
       title: "Code",
       isCompleted: true
     }, {
-      title: "Meeting with team at 9",
+      title: "Meeting now",
       isCompleted: false
     }, {
-      title: "Check Emails",
+      title: "Check Emails at 9",
       isCompleted: false
     }, {
-      title: "Write an article",
+      title: "Write an article asap",
       isCompleted: false
     }];
     const [list, setList] = React.useState(instState);
