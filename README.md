@@ -1,3 +1,4 @@
-# React-Native-App
+# React Native App to practice and learn
 
-Setting up 
+To-Do app, adapted from a course, to understand its structure.
+
